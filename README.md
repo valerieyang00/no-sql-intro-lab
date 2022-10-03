@@ -17,14 +17,49 @@ Fork and clone this repository and answer questions as you research directly in 
 ## Questions:
 
 1. What does the term noSQL refer to, and what other term is often used synonymously with noSQL?
+* noSQL = non-relational database, databases that store data in a format other than relational tables
+* 'non SQL' or 'not only SQL'
+
 1. What are some of the common arguments for using a non-relational versus a relational db?
+* optimization on developer productivity
+* allow developers to store huge amounts of unstructed data, providing flexibility (flexible schemas)
+* optimized for agile environment - give developers ability to iterate quickly and make changes throughout their software stack, all the way down to the database (fast queries/ ease of use)
+* provide capabilities to scale out instead of scale up (horizontal scaling)
+
 1. In this class we will be using the document style of non-relational databases. What are the charecteristics of a document based db? 
+* Document databases store data in documents similar to JSON (JavaScript Object Notation) objects. Each document contains pairs of fields and values. The values can typically be a variety of types including things like strings, numbers, booleans, arrays, or objects.
+
 1. In this class we will be using Mongo specificially as our no-SQL db. Look into Mongo and answer this question: what is the priamry difference between how Mongo is maintained vs SQL?
+* https://www.mongodb.com/compare/mongodb-postgresql
+
+
 1. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo. 
-1. What is an example situation where a Mongo database makes sense versus a non-relational db?
+* SQL:
+INSERT INTO users(user_id, age, status)
+VALUES ('bcd001', 45,"A");
+
+* Mongo:
+db.users.insert({
+  user_id: "bcd001",
+  age: 45,
+  status: "A" 
+})
+
+1. What is an example situation where a Mongo database makes sense versus a relational db?
+* makes collaboration easier - developers can own documents or portions of documents and evolve them as needed, without intermediation and complex dependency chains between different teams
+
 1. What are the benefits of SQL databases? NoSQL Databases?
+* SQL - mature and supported by strong tech community. if data is highly stgructed and anticipate minimal changes, SQL will have less problems. SQL is more standardized than NoSQL.
+
+* NoSQL - flexibility, scale-out 
+
 1. Explain the differences between ACID and BASE models.
+* https://www.geeksforgeeks.org/acid-model-vs-base-model-for-database/#:~:text=The%20difference%20between%20ACID%20and,BASE%20model%20provides%20high%20availability.
+* ACID- Atomicity, Consistency, Isolation, Durability
+* BASE - Basically Available, Soft State, Eventually Consistent
+
 1. What should you consider when deciding between using a relational database or a non-relational database for your project?
+* https://integrant.com/blog/when-to-use-sql-vs-nosql/
 
 
 ## Visual Comparisons
